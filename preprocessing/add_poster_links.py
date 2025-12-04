@@ -9,6 +9,7 @@ from selenium.common.exceptions import TimeoutException
 import pandas as pd
 import os
 
+
 def fetch_single_poster(driver, imdb_url):
     
     try:
@@ -44,7 +45,7 @@ def get_posters_in_batch(driver, list_of_imdb_urls):
 if __name__ == '__main__':
     links_df = pd.read_csv('tmp_final_dataset.csv')
     urls_to_process = links_df['imdb'].dropna().unique().tolist()
-    urls_to_process= urls_to_process
+    # urls_to_process= urls_to_process
     batch_size = 10
     all_poster_links = {}
 
@@ -55,6 +56,7 @@ if __name__ == '__main__':
         all_poster_links = pd.Series(df_checkpoint.poster_link.values, index=df_checkpoint.imdb_url).to_dict()
         urls_to_fetch = [url for url in urls_to_process if url not in all_poster_links]
         print(f"Còn lại {len(urls_to_fetch)} link cần cào.") 
+        
     else:
         urls_to_fetch = urls_to_process
 
