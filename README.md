@@ -30,9 +30,9 @@ This project uses the **MovieLens 1M** dataset from GroupLens Research. This is 
 * **Source URL**: [https://grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/)
 * **Topic**: Movie Ratings.
 * **Scale (MovieLens 1M)**:
-    * **Number of Ratings**: 1 million (1,000,000) ratings.
-    * **Number of Users**: 6,000 users.
-    * **Number of Movies**: 4,000 movies.
+    * **Number of Ratings**: 32 million (32,000,000) ratings.
+    * **Number of Users**: 87,585 users.
+    * **Number of Movies**: 200,000 movies.
 
 ---
 
@@ -69,3 +69,4 @@ project_root/
 │   └─ recommendations.html
 │
 └─ README.md
+
