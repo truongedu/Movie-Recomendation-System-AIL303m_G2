@@ -169,10 +169,15 @@
                 <a href="http://www.imdb.com/title/tt{{ movie.imdbId }}" target="_blank">
                     <img src="{{ movie.poster_link }}" alt="Poster for {{ movie.title }}">
                     <h4>{{ movie.title }}</h4>
-                    <p>{{ movie.genres }}</p>
+                    <div class="movie-genres">
+                        {% for genre in movie.genres %}
+                        <span class="genre-badge">{{ genre }}</span>
+                        {% endfor %}
+                    </div>
                 </a>
             </div>
             {% endfor %}
+
         </div>
         <a href="/" class="back-link">Đánh giá lại</a>
     </div>
